@@ -22,4 +22,4 @@ for x, y, w, h in faces:
         cropped_image,
     )
     i = i + 2
- 
+
