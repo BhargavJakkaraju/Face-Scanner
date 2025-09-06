@@ -6,10 +6,10 @@ import os
 from huggingface_hub import hf_hub_url, hf_hub_download as cached_download
 
 # Connect to PostgreSQL
-conn = psycopg2.connect(
-    "postgres://avnadmin:***REMOVED***@pg-1f8db37e-bhargavjakkaraju-1270.d.aivencloud.com:26527/defaultdb?sslmode=require"
-)
-cur = conn.cursor()
+
+DB_URL = os.environ.get("DATABASE_URL")
+conn = psycopg2.connect()
+cur = conn.cursor(DB_URL)
 
 # Create table if it doesn't exist
 cur.execute("""

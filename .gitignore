@@ -16,3 +16,4 @@ Thumbs.db
 
 # Ignore VS Code workspace settings (optional)
 .vscode/
+.env
